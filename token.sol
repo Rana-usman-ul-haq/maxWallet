@@ -1171,7 +1171,7 @@ interface IUniswapV2Router02 is IUniswapV2Router01 {
 contract MyToken is ERC20, Ownable {
     using SafeMath for uint256;
 
-    uint256 public maxWalletLimit = 500000000 * 10 ** decimals();
+    uint256 public maxWalletLimit = 21000000 * 10 ** decimals();
 
     IUniswapV2Router02 public immutable uniswapV2Router;
     address public immutable uniswapV2Pair;
@@ -1187,7 +1187,7 @@ contract MyToken is ERC20, Ownable {
         uniswapV2Router = _uniswapV2Router;
 
         // MINT INITIAL SUPPLY
-        _mint(msg.sender, 10000000000 * 10 ** decimals());
+        _mint(msg.sender, 420000000 * 10 ** decimals());
     }
 
     function _transfer(
